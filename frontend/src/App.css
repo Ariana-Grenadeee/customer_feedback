@@ -1,0 +1,2724 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.auth-card {
+    width: 100%;
+    max-width: 660px;
+
+    padding: 70px 60px;
+
+    background: #222222;
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55);
+
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.brand h1 {
+    color: #a7191f;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 48px;
+
+    font-weight: 900;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 18px;
+}
+
+.brand p {
+    color: #929292;
+
+    font-size: 16px;
+
+    letter-spacing: 7px;
+
+    font-weight: 500;
+}
+
+.brand p span {
+    color: #a7191f;
+
+    margin: 0 6px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auth-heading {
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+.auth-heading h2 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #d8d8d8;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    height: 62px;
+
+    padding: 0 20px;
+
+    border: 1px solid #3b3b3b;
+
+    border-radius: 10px;
+
+    background: #1c1c1c;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #777777;
+}
+
+.form-group input:focus {
+    border-color: #a7191f;
+
+    box-shadow:
+        0 0 0 2px rgba(167, 25, 31, 0.15);
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.primary-button {
+    width: 100%;
+
+    height: 62px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #a7191f;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #c02027;
+
+    box-shadow:
+        0 8px 20px rgba(167, 25, 31, 0.25);
+
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.auth-footer {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 38px;
+
+    color: #858585;
+
+    font-size: 18px;
+}
+
+.text-button {
+    border: none;
+
+    background: none;
+
+    color: #b21c23;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.text-button:hover {
+    color: #d1262d;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .auth-page {
+        padding: 20px;
+    }
+
+    .auth-card {
+        padding: 50px 30px;
+    }
+
+    .brand h1 {
+        font-size: 36px;
+
+        letter-spacing: 5px;
+    }
+
+    .brand p {
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+    .auth-heading h2 {
+        font-size: 28px;
+    }
+
+    .form-group label {
+        font-size: 17px;
+    }
+
+    .form-group input {
+        height: 56px;
+
+        font-size: 16px;
+    }
+
+    .primary-button {
+        height: 56px;
+
+        font-size: 18px;
+    }
+
+    .auth-footer {
+        font-size: 15px;
+    }
+
+    .text-button {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   FEEDBACK PAGE
+========================================= */
+
+.feedback-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.feedback-header {
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: #1c1c1c;
+
+    border-bottom: 1px solid #373737;
+}
+
+.header-brand h1 {
+    color: #a7191f;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    letter-spacing: 4px;
+}
+
+.header-brand span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #858585;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.feedback-header nav button {
+    padding: 10px 22px;
+
+    border: 1px solid #a7191f;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.feedback-header nav button:hover {
+    background: #a7191f;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.feedback-container {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 65px 25px 80px;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.feedback-intro {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-label {
+    color: #a7191f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.feedback-intro h2 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+}
+
+.feedback-intro > p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: #929292;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FEEDBACK CARD
+========================================= */
+
+.feedback-card {
+    padding: 45px;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.feedback-group {
+    margin-bottom: 30px;
+}
+
+.feedback-group label {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #dddddd;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.feedback-group select {
+    width: 100%;
+
+    height: 56px;
+
+    padding: 0 16px;
+
+    border: 1px solid #3b3b3b;
+
+    border-radius: 9px;
+
+    background: #191919;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.feedback-group select:focus {
+    border-color: #a7191f;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.rating-container {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 5px;
+}
+
+.star {
+    width: 55px;
+
+    height: 50px;
+
+    border: 1px solid #414141;
+
+    border-radius: 8px;
+
+    background: #191919;
+
+    color: #555555;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.star:hover {
+    color: #a7191f;
+
+    border-color: #a7191f;
+}
+
+.star.active {
+    color: #c02027;
+
+    border-color: #a7191f;
+
+    background: #2b1516;
+}
+
+.rating-text {
+    margin-top: 10px;
+
+    color: #929292;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.feedback-group textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    resize: vertical;
+
+    min-height: 150px;
+
+    border: 1px solid #3b3b3b;
+
+    border-radius: 9px;
+
+    background: #191919;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.feedback-group textarea::placeholder {
+    color: #6f6f6f;
+}
+
+.feedback-group textarea:focus {
+    border-color: #a7191f;
+
+    box-shadow:
+        0 0 0 2px rgba(167, 25, 31, 0.12);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.feedback-submit {
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #a7191f;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.feedback-submit:hover {
+    background: #c02027;
+
+    box-shadow:
+        0 8px 20px rgba(167, 25, 31, 0.25);
+}
+
+
+/* =========================================
+   FEEDBACK RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .feedback-header {
+        height: auto;
+
+        padding: 20px 25px;
+
+        gap: 20px;
+    }
+
+    .header-brand h1 {
+        font-size: 21px;
+    }
+
+    .feedback-container {
+        padding: 45px 18px;
+    }
+
+    .feedback-intro h2 {
+        font-size: 29px;
+    }
+
+    .feedback-card {
+        padding: 28px 22px;
+    }
+
+    .rating-container {
+        gap: 5px;
+    }
+
+    .star {
+        width: 48px;
+
+        height: 46px;
+
+        font-size: 25px;
+    }
+}
+
+/* =========================================
+   FEEDBACK HISTORY
+========================================= */
+
+.history-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HISTORY NAVIGATION
+========================================= */
+
+.history-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.history-nav button {
+    padding: 10px 18px;
+
+    border: 1px solid #3f3f3f;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #d5d5d5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.history-nav button:first-child {
+    border-color: #a7191f;
+
+    color: #ffffff;
+}
+
+.history-nav button:hover {
+    background: #a7191f;
+
+    border-color: #a7191f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HISTORY CONTAINER
+========================================= */
+
+.history-container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 65px 25px 80px;
+}
+
+
+/* =========================================
+   HISTORY INTRO
+========================================= */
+
+.history-intro {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.history-intro h2 {
+    color: #ffffff;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.history-intro > p:last-child {
+    color: #929292;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   HISTORY LIST
+========================================= */
+
+.history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   FEEDBACK CARD
+========================================= */
+
+.feedback-history-card {
+    padding: 30px;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 14px;
+
+    transition: 0.2s ease;
+}
+
+.feedback-history-card:hover {
+    border-color: #555555;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.history-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.history-service-label {
+    color: #a7191f;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+.history-card-header h3 {
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-badge.pending {
+    background: #3a321d;
+
+    color: #d6b75c;
+}
+
+.status-badge.reviewed {
+    background: #1d323a;
+
+    color: #67b5cf;
+}
+
+.status-badge.resolved {
+    background: #1d3926;
+
+    color: #69c486;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.history-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.history-stars {
+    display: flex;
+
+    gap: 2px;
+}
+
+.history-star {
+    color: #484848;
+
+    font-size: 19px;
+}
+
+.history-star.active {
+    color: #c02027;
+}
+
+.history-rating > span:last-child {
+    color: #858585;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   COMMENT
+========================================= */
+
+.history-comment {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    background: #191919;
+
+    border-left: 3px solid #a7191f;
+
+    border-radius: 5px;
+
+    color: #c8c8c8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.history-date {
+    margin-top: 18px;
+
+    color: #666666;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-feedback {
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 14px;
+}
+
+.empty-icon {
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #321719;
+
+    color: #c02027;
+
+    font-size: 25px;
+}
+
+.empty-feedback h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.empty-feedback p {
+    margin-bottom: 25px;
+
+    color: #858585;
+}
+
+.small-button {
+    width: auto;
+
+    padding: 0 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .feedback-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 20px;
+    }
+
+    .history-nav {
+        justify-content: flex-end;
+    }
+
+    .history-container {
+        padding: 40px 18px;
+    }
+
+    .history-intro h2 {
+        font-size: 30px;
+    }
+
+    .history-card-header {
+        flex-direction: column;
+    }
+
+    .status-badge {
+        align-self: flex-start;
+    }
+}
+
+/* =========================================
+   CUSTOMER DASHBOARD
+========================================= */
+
+.dashboard-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   DASHBOARD HEADER
+========================================= */
+
+.dashboard-header {
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: #1c1c1c;
+
+    border-bottom: 1px solid #373737;
+}
+
+.dashboard-logout {
+    padding: 10px 22px;
+
+    border: 1px solid #a7191f;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-logout:hover {
+    background: #a7191f;
+}
+
+
+/* =========================================
+   DASHBOARD CONTAINER
+========================================= */
+
+.dashboard-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 65px 25px 80px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.dashboard-welcome {
+    margin-bottom: 45px;
+}
+
+.dashboard-welcome h2 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 40px;
+}
+
+.dashboard-welcome > p:last-child {
+    color: #8e8e8e;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card {
+    display: flex;
+
+    gap: 22px;
+
+    padding: 30px;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 15px;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-card:hover {
+    border-color: #555555;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.dashboard-icon {
+    flex-shrink: 0;
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #321719;
+
+    color: #c02027;
+
+    font-size: 27px;
+}
+
+.feedback-icon {
+    font-size: 30px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.dashboard-card-content {
+    flex: 1;
+}
+
+.dashboard-card-content h3 {
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+.dashboard-card-content p {
+    min-height: 55px;
+
+    margin-bottom: 20px;
+
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DASHBOARD BUTTON
+========================================= */
+
+.dashboard-button {
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #a7191f;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-button:hover {
+    background: #c02027;
+}
+
+.dashboard-button.secondary {
+    background: #303030;
+
+    border: 1px solid #454545;
+}
+
+.dashboard-button.secondary:hover {
+    background: #a7191f;
+
+    border-color: #a7191f;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .dashboard-header {
+        padding: 0 25px;
+    }
+
+    .dashboard-container {
+        padding: 45px 18px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .dashboard-header {
+        height: auto;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    .dashboard-card {
+        flex-direction: column;
+    }
+
+    .dashboard-card-content p {
+        min-height: auto;
+    }
+}
+
+/* =========================================
+   MANAGEMENT FEEDBACK
+========================================= */
+
+.management-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MANAGEMENT HEADER
+========================================= */
+
+.management-header {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 15px 45px;
+
+    background: #1c1c1c;
+
+    border-bottom: 1px solid #373737;
+}
+
+.management-title {
+    color: #a7191f;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.management-logout {
+    padding: 10px 20px;
+
+    border: 1px solid #a7191f;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.management-logout:hover {
+    background: #a7191f;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.management-container {
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px 80px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.management-intro {
+    margin-bottom: 35px;
+}
+
+.management-intro h2 {
+    margin-bottom: 10px;
+
+    font-size: 38px;
+}
+
+.management-intro > p:last-child {
+    color: #858585;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.analytics-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    min-height: 135px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 13px;
+}
+
+.summary-label {
+    margin-bottom: 10px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.summary-card strong {
+    color: #ffffff;
+
+    font-size: 32px;
+}
+
+.summary-stars {
+    margin-top: 5px;
+
+    color: #c02027;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.management-controls {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 25px;
+}
+
+.management-controls label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #858585;
+
+    font-size: 13px;
+}
+
+.management-controls select {
+    min-width: 190px;
+
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid #3d3d3d;
+
+    border-radius: 7px;
+
+    background: #1c1c1c;
+
+    color: #ffffff;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.management-controls select:focus {
+    border-color: #a7191f;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.management-feedback-section {
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.management-section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 25px 28px;
+
+    border-bottom: 1px solid #373737;
+}
+
+.management-section-heading h3 {
+    font-size: 23px;
+}
+
+.management-section-heading > span {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.feedback-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.feedback-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1000px;
+}
+
+.feedback-table th {
+    padding: 17px 20px;
+
+    background: #1b1b1b;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+}
+
+.feedback-table td {
+    padding: 20px;
+
+    border-top: 1px solid #333333;
+
+    color: #bdbdbd;
+
+    font-size: 14px;
+
+    vertical-align: middle;
+}
+
+.feedback-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.feedback-table tbody tr:hover {
+    background: #292929;
+}
+
+.feedback-table td strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLE RATING
+========================================= */
+
+.table-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.management-stars {
+    display: flex;
+
+    gap: 1px;
+}
+
+.management-star {
+    color: #444444;
+
+    font-size: 14px;
+}
+
+.management-star.active {
+    color: #c02027;
+}
+
+.table-rating > span {
+    color: #858585;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLE COMMENT
+========================================= */
+
+.table-comment {
+    max-width: 280px;
+
+    color: #999999 !important;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLE DATE
+========================================= */
+
+.table-date {
+    white-space: nowrap;
+
+    color: #777777 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .analytics-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .management-header {
+        padding: 15px 25px;
+    }
+
+    .management-title {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .analytics-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .management-container {
+        padding: 40px 18px;
+    }
+
+    .management-intro h2 {
+        font-size: 30px;
+    }
+
+    .management-section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+/* =========================================
+   FEEDBACK ANALYTICS
+========================================= */
+
+.analytics-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.analytics-header {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 15px 45px;
+
+    background: #1c1c1c;
+
+    border-bottom: 1px solid #373737;
+}
+
+.analytics-header-title {
+    color: #a7191f;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.analytics-back-button {
+    padding: 10px 18px;
+
+    border: 1px solid #a7191f;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.analytics-back-button:hover {
+    background: #a7191f;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.analytics-container {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px 80px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.analytics-intro {
+    margin-bottom: 35px;
+}
+
+.analytics-intro h2 {
+    margin-bottom: 10px;
+
+    font-size: 38px;
+}
+
+.analytics-intro > p:last-child {
+    color: #858585;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.analytics-overview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.analytics-overview-card {
+    min-height: 145px;
+
+    padding: 25px;
+
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 13px;
+}
+
+.analytics-overview-card > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.analytics-overview-card strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 34px;
+}
+
+.overview-stars {
+    margin-top: 7px;
+
+    color: #c02027;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   ANALYTICS GRID
+========================================= */
+
+.analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.analytics-panel {
+    background: #222222;
+
+    border: 1px solid #383838;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.analytics-panel-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 25px 28px;
+
+    border-bottom: 1px solid #373737;
+}
+
+.analytics-panel-heading h3 {
+    font-size: 22px;
+}
+
+.analytics-panel-heading > span {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RATING BREAKDOWN
+========================================= */
+
+.rating-breakdown {
+    padding: 25px 28px;
+}
+
+.rating-row {
+    display: grid;
+
+    grid-template-columns: 35px 1fr 30px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 19px;
+}
+
+.rating-row:last-child {
+    margin-bottom: 0;
+}
+
+.rating-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+}
+
+.small-star {
+    color: #c02027;
+
+    font-size: 12px;
+}
+
+.rating-bar {
+    height: 9px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #353535;
+}
+
+.rating-bar-fill {
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: #a7191f;
+
+    transition: width 0.3s ease;
+}
+
+.rating-count {
+    color: #888888;
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   STATUS ANALYTICS
+========================================= */
+
+.status-analytics {
+    padding: 25px 28px;
+}
+
+.status-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #333333;
+
+    color: #c5c5c5;
+}
+
+.status-row:last-child {
+    border-bottom: none;
+}
+
+.status-row-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.status-dot {
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+.status-dot.pending {
+    background: #d6b75c;
+}
+
+.status-dot.reviewed {
+    background: #67b5cf;
+}
+
+.status-dot.resolved {
+    background: #69c486;
+}
+
+.status-row strong {
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   SERVICE PERFORMANCE
+========================================= */
+
+.service-panel {
+    margin-bottom: 20px;
+}
+
+.service-table-wrapper {
+    overflow-x: auto;
+}
+
+.service-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.service-table th {
+    padding: 17px 25px;
+
+    background: #1b1b1b;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+}
+
+.service-table td {
+    padding: 20px 25px;
+
+    border-top: 1px solid #333333;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+}
+
+.service-table td strong {
+    color: #ffffff;
+}
+
+.service-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #dddddd;
+}
+
+.service-rating span {
+    color: #c02027;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.analytics-actions {
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-top: 25px;
+}
+
+.analytics-actions button {
+    padding: 12px 20px;
+
+    border: 1px solid #3f3f3f;
+
+    border-radius: 7px;
+
+    background: #222222;
+
+    color: #cccccc;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.analytics-actions button:hover {
+    border-color: #a7191f;
+
+    background: #a7191f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .analytics-overview {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-header {
+        padding: 15px 25px;
+    }
+
+    .analytics-header-title {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .analytics-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-container {
+        padding: 40px 18px;
+    }
+
+    .analytics-intro h2 {
+        font-size: 30px;
+    }
+
+    .analytics-panel-heading {
+        padding: 20px;
+    }
+
+    .rating-breakdown,
+    .status-analytics {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   FEEDBACK HISTORY
+========================================= */
+
+.feedback-history-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242424 0%,
+            #111111 55%,
+            #0c0c0c 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.history-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.history-nav button {
+    padding: 10px 17px;
+
+    border: 1px solid #3d3d3d;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #cccccc;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.history-nav button:hover {
+    border-color: #a7191f;
+
+    background: #a7191f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.history-container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px 80px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.history-intro {
+    margin-bottom: 35px;
+}
+
+.history-intro h2 {
+    margin: 5px 0 10px;
+
+    font-size: 38px;
+}
+
+.history-intro p:last-child {
+    color: #858585;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.history-loading {
+    padding: 80px 20px;
+
+    color: #999999;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.history-error {
+    margin-bottom: 25px;
+
+    padding: 15px 18px;
+
+    border: 1px solid #7d2428;
+
+    border-radius: 8px;
+
+    background: #2a1516;
+
+    color: #e7a3a6;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-feedback {
+    padding: 65px 30px;
+
+    border: 1px solid #343434;
+
+    border-radius: 14px;
+
+    background: #202020;
+
+    text-align: center;
+}
+
+.empty-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #2d1718;
+
+    color: #c02027;
+
+    font-size: 25px;
+}
+
+.empty-feedback h3 {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+}
+
+.empty-feedback p {
+    margin-bottom: 25px;
+
+    color: #858585;
+}
+
+.empty-feedback button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #a7191f;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.empty-feedback button:hover {
+    background: #c02027;
+}
+
+
+/* =========================================
+   FEEDBACK LIST
+========================================= */
+
+.history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   FEEDBACK CARD
+========================================= */
+
+.history-card {
+    padding: 25px 28px;
+
+    border: 1px solid #373737;
+
+    border-radius: 13px;
+
+    background: #222222;
+
+    transition: 0.2s ease;
+}
+
+.history-card:hover {
+    border-color: #505050;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.history-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #333333;
+}
+
+.history-service-label {
+    margin-bottom: 5px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.history-card-header h3 {
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.feedback-status {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+.feedback-status.pending {
+    background: #3b321c;
+
+    color: #d6b75c;
+}
+
+.feedback-status.reviewed {
+    background: #1d3440;
+
+    color: #67b5cf;
+}
+
+.feedback-status.resolved {
+    background: #1d3a28;
+
+    color: #69c486;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.history-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 0;
+}
+
+.history-stars {
+    display: flex;
+
+    gap: 3px;
+}
+
+.history-star {
+    color: #454545;
+
+    font-size: 21px;
+}
+
+.history-star.active {
+    color: #c02027;
+}
+
+.history-rating > span:last-child {
+    color: #888888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   COMMENT
+========================================= */
+
+.history-comment {
+    padding: 18px 20px;
+
+    border-left: 3px solid #a7191f;
+
+    background: #1b1b1b;
+
+    color: #c5c5c5;
+
+    line-height: 1.7;
+}
+
+.history-comment p {
+    margin: 0;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.history-date {
+    margin-top: 18px;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.history-actions {
+    margin-top: 25px;
+}
+
+.history-actions button {
+    padding: 11px 18px;
+
+    border: 1px solid #3d3d3d;
+
+    border-radius: 7px;
+
+    background: #222222;
+
+    color: #bbbbbb;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.history-actions button:hover {
+    border-color: #a7191f;
+
+    background: #a7191f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .history-container {
+        padding: 40px 18px;
+    }
+
+    .history-intro h2 {
+        font-size: 30px;
+    }
+
+    .history-card {
+        padding: 20px;
+    }
+
+    .history-card-header {
+        flex-direction: column;
+    }
+
+    .history-nav button {
+        padding: 8px 12px;
+    }
+
+}
