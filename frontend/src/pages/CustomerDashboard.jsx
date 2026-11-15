@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../api";
 
 function CustomerDashboard() {
     const navigate = useNavigate();
@@ -17,12 +18,29 @@ function CustomerDashboard() {
                     </span>
                 </div>
 
-                <button
-                    className="dashboard-logout"
-                    onClick={() => navigate("/")}
-                >
-                    Logout
-                </button>
+                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                    <a
+                        href="http://localhost:5176/menu"
+                        style={{
+                            padding: '8px 14px',
+                            background: '#1f2937',
+                            color: '#f3f4f6',
+                            border: '1px solid #374151',
+                            borderRadius: '6px',
+                            fontSize: '0.85rem',
+                            fontWeight: '600',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        ← Digital Menu
+                    </a>
+                    <button
+                        className="dashboard-logout"
+                        onClick={logoutUser}
+                    >
+                        Logout
+                    </button>
+                </div>
 
             </header>
 
@@ -72,9 +90,7 @@ function CustomerDashboard() {
                             <button
                                 className="dashboard-button"
                                 onClick={() =>
-                                    console.log(
-                                        "Reservation module"
-                                    )
+                                    window.location.href = "http://localhost:5176/reservation"
                                 }
                             >
                                 Make Reservation

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { logoutUser } from "../api";
 
 function ManagementFeedback() {
     const [filter, setFilter] = useState("All");
@@ -82,14 +83,31 @@ function ManagementFeedback() {
                     <span>MANAGEMENT PORTAL</span>
                 </div>
 
-                <button
-                    className="management-logout"
-                    onClick={() =>
-                        (window.location.href = "/")
-                    }
-                >
-                    Logout
-                </button>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <a
+                        href="http://localhost:5173/dashboard"
+                        style={{
+                            padding: '8px 14px',
+                            background: '#ef4444',
+                            color: '#ffffff',
+                            borderRadius: '6px',
+                            fontSize: '0.85rem',
+                            fontWeight: '600',
+                            textDecoration: 'none',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px'
+                        }}
+                    >
+                        ← Vikings ERP
+                    </a>
+                    <button
+                        className="management-logout"
+                        onClick={logoutUser}
+                    >
+                        Logout
+                    </button>
+                </div>
 
             </header>
 

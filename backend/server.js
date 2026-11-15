@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const db = require("./db");
@@ -81,7 +82,7 @@ app.get("/api/roles", (req, res) => {
 });
 
 // Start Server
-const PORT = 5000;
+const PORT = process.env.PORT || 4005;
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

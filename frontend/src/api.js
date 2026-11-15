@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4005/api";
 
 
 // ==========================================
@@ -78,11 +78,9 @@ export const loginUser = async (email, password) => {
 // ==========================================
 
 export const logoutUser = () => {
-
     localStorage.removeItem("token");
-
     localStorage.removeItem("user");
-
+    window.location.href = "http://localhost:5173/login";
 };
 
 

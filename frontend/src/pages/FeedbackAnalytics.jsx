@@ -44,14 +44,33 @@ function FeedbackAnalytics() {
                     MANAGEMENT PORTAL
                 </div>
 
-                <button
-                    className="analytics-back-button"
-                    onClick={() =>
-                        navigate("/management/feedback")
-                    }
-                >
-                    Back to Feedback
-                </button>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <a
+                        href="http://localhost:5173/dashboard"
+                        style={{
+                            padding: '8px 14px',
+                            background: '#ef4444',
+                            color: '#ffffff',
+                            borderRadius: '6px',
+                            fontSize: '0.85rem',
+                            fontWeight: '600',
+                            textDecoration: 'none',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px'
+                        }}
+                    >
+                        ← Vikings ERP
+                    </a>
+                    <button
+                        className="analytics-back-button"
+                        onClick={() =>
+                            navigate("/management/feedback")
+                        }
+                    >
+                        Back to Feedback
+                    </button>
+                </div>
 
             </header>
 

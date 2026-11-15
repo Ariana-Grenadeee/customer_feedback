@@ -254,7 +254,31 @@ function FeedbackHistory() {
                 </div>
 
 
-                <nav className="history-nav">
+                <nav className="history-nav" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+
+                    <a
+                        href="http://localhost:5176/menu"
+                        style={{
+                            padding: '8px 14px',
+                            background: '#1f2937',
+                            color: '#f3f4f6',
+                            border: '1px solid #374151',
+                            borderRadius: '6px',
+                            fontSize: '0.85rem',
+                            fontWeight: '600',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        ← Digital Menu
+                    </a>
+
+                    <button
+                        onClick={() =>
+                            navigate("/dashboard")
+                        }
+                    >
+                        Dashboard
+                    </button>
 
                     <button
                         onClick={() =>

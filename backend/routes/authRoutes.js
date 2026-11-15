@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
+const verifyToken = require("../middleware/authMiddleware");
 
 const router = express.Router();
 const db = require("../db");
@@ -450,6 +451,40 @@ router.post("/reset-password", async (req, res) => {
 
 });
 
+
+// ==========================================
+// GET CURRENT USER (/me)
+// ==========================================
+
+router.get("/me", verifyToken, (req, res) => {
+    const userId = req.user.id;
+    const sql = `
+        SELECT users.id, users.name, users.email, users.role_id, roles.role_name AS role
+        FROM users
+        LEFT JOIN roles ON users.role_id = roles.id
+        WHERE users.id = ?
+    `;
+
+    db.query(sql, [userId], (err, results) => {
+        if (err || results.length === 0) {
+            return res.json({
+                message: "Current user session",
+                user: req.user
+            });
+        }
+
+        res.json({
+            message: "Current user session",
+            user: {
+                id: results[0].id,
+                name: results[0].name,
+                email: results[0].email,
+                role_id: results[0].role_id,
+                role: results[0].role || req.user.role || "Customer"
+            }
+        });
+    });
+});
 
 // ==========================================
 // EXPORT ROUTER
